@@ -1,0 +1,445 @@
+* {
+ margin: 0;
+ padding: 0;
+}
+
+body {
+ margin: 0 auto;
+ height: 100vh;
+ display: flex;
+ background: url('../img/bg-page.jpg');
+ justify-content: center;
+ align-items: center;
+ font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ font-size: 19px;
+}
+
+.wrapper-welcom,
+.wrapper-settings,
+.wrapper-game,
+.wrapper-score {
+ display: none;
+ height: 80%;
+ width: 70%;
+ flex-direction: column;
+ background-color: #F7F2C7;
+ padding: 60px;
+ box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.75);
+ border-radius: 5px;
+ overflow: auto;
+}
+
+
+/*_______________________________welcom_______________________*/
+
+h1 {
+ text-align: center;
+ text-transform: uppercase;
+ color: #AD3D3D;
+ -webkit-text-stroke: 3px #691616;
+ font-size: 65px;
+ margin-bottom: 50px;
+}
+
+.content-heading {
+ margin-bottom: 10px;
+ padding-left: 25px;
+}
+
+.content-text {
+ margin-bottom: 80px;
+}
+
+.content-text::first-letter {
+ padding-left: 25px;
+}
+
+.btn {
+ text-transform: uppercase;
+ background-color: #F7983B;
+ padding: 20px 100px;
+ border: 4px solid #691616;
+ border-radius: 10px;
+ font-size: 40px;
+ font-weight: 700;
+ user-select: none;
+}
+
+.btn-play {
+ align-self: center;
+}
+
+.btn:hover {
+ cursor: pointer;
+ box-shadow: 0px 0px 108px -10px rgba(217, 0, 0, 1);
+}
+
+.btn-play:active {
+ padding: 17px 95px;
+ margin-top: 2px;
+ font-size: 38px;
+ box-shadow: none;
+}
+
+
+/*______________________settings_______________*/
+
+.wrapper-settings {
+ justify-content: space-around;
+}
+
+.settings-heading {
+ font-size: 23px;
+ margin: 10px 0 16px;
+}
+
+.formPlayer {
+ display: flex;
+ flex-direction: column;
+}
+
+.formPlayer label {
+ margin-bottom: 20px;
+ font-size: 18px;
+}
+
+.formPlayer input {
+ width: 200px;
+ height: 30px;
+ border: none;
+ border-bottom: 2px solid #DFDBB4;
+ background-color: #F7F2C7;
+ font-size: 20px;
+ outline: none;
+}
+
+.shirts-levels {
+ display: flex;
+}
+
+.img-shirt {
+ margin-right: 10px;
+ border: 3px solid #DFDBB4;
+ transition: all .05s linear;
+}
+
+.img-shirt:hover {
+ cursor: pointer;
+ border-color: #AD3D3D;
+}
+
+.img-shirt:active {
+ border-color: white;
+}
+
+.shirt-checked {
+ border-color: #AD3D3D;
+}
+
+.levels {
+ display: flex;
+ flex-direction: column;
+ margin-left: 10%;
+}
+
+.levels label {
+ margin-bottom: 20px;
+ cursor: pointer;
+}
+
+.levels input {
+ outline: none;
+ margin-right: 10px;
+ cursor: pointer;
+}
+
+.btn-start {
+ align-self: flex-end;
+ padding: 14px 50px;
+ margin-right: 1%;
+}
+
+.btn-start:active {
+ padding: 13px 48px;
+ margin-top: 2px;
+ box-shadow: none;
+}
+
+
+/*_____________________game__________________*/
+
+.wrapper-game {
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+.content-info {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ width: 20%;
+}
+
+.timer {
+ padding: 10px 20px;
+ width: 150px;
+ background-color: #F0ECD4;
+ box-shadow: inset 0px 0px 6px 1px rgba(0, 0, 0, 0.75);
+ margin: 30px;
+ align-self: center;
+ font-size: 40px;
+ text-align: center;
+}
+
+.name-cheer-up {
+ margin-bottom: 70px;
+ text-align: center;
+ font-size: 30px;
+}
+
+.btn-back {
+ padding: 10px 60px;
+ font-size: 16px;
+ text-align: center;
+ margin-bottom: 10px;
+}
+
+.btn-back:active {
+ padding: 9px 58px;
+ margin-bottom: 11px;
+}
+
+.game-fild {
+ display: flex;
+ height: 100%;
+ width: 800px;
+ justify-content: space-between;
+ align-content: space-between;
+ flex-wrap: wrap; //background-color: red;
+ perspective: 1000;
+}
+
+.card {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ box-sizing: border-box;
+ border: 1px solid white;
+ cursor: pointer;
+ font-size: 60px;
+ transform-style: preserve-3d;
+ transition: .5s; //border: 5px solid red;
+ box-shadow: 5px 5px 6px 0px rgba(120, 120, 120, 1);
+ background: rgba(237, 237, 237, 1);
+ background: -moz-linear-gradient(45deg, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+ background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(237, 237, 237, 1)), color-stop(53%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+ background: -webkit-linear-gradient(45deg, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+ background: -o-linear-gradient(45deg, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+ background: -ms-linear-gradient(45deg, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+ background: linear-gradient(45deg, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=1);
+}
+
+.bg-donut {
+
+ background-size: cover;
+ background-position: center center;
+ background-image: url(../img/donut-shirt.jpg);
+}
+
+.bg-planet {
+
+
+ background-size: cover;
+ background-position: center center;
+ background-image: url(../img/planet-shirt.jpg);
+}
+
+.bg-mountain {
+
+ background-size: cover;
+ background-position: center center;
+ background-image: url(../img/mountain-shirt.jpg);
+}
+
+.bg-donut+.front {
+ background: url(../img/face-text-donut.jpg) no-repeat center center;
+ background-size: cover;
+ color: #fff;
+ -webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;
+ -webkit-text-stroke: 2px #3B003B;
+}
+
+.bg-mountain+.front {
+ background: url(../img/face-text-mountain-.jpg) no-repeat center center;
+ background-size: cover;
+ color: #fff;
+ -webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;
+ -webkit-text-stroke: 2px #00521D;
+}
+
+.bg-planet+.front {
+ background: url(../img/face-text-planet.jpe) no-repeat center center;
+ background-size: cover;
+ color: #fff;
+ -webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;
+ -webkit-text-stroke: 1px #000;
+}
+
+
+/*5x2*/
+
+.card-low-level {
+ height: 49.9%;
+ width: 19.9%;
+ font-size: 150px;
+}
+
+
+/*6x3*/
+
+.card-medium-level {
+ height: 33.2%;
+ width: 16.58%;
+ font-size: 120px;
+}
+
+
+/*8x3*/
+
+.card-hight-level {
+ height: 33.2%;
+ width: 12.415%;
+ font-size: 70px;
+}
+
+.front,
+.back {
+ width: 100%;
+ height: 100%;
+ backface-visibility: hidden;
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.front {
+ transform: rotateY(180deg);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ user-select: none;
+}
+
+.back {
+ z-index: 2;
+}
+
+.disable {
+ visibility: visible;
+}
+
+.turn {
+ transform: rotateY(180deg);
+ box-shadow: -5px 5px 6px 0px rgba(120, 120, 120, 1);
+}
+
+.unturn {
+ transform: rotateY(0deg);
+}
+
+.checked {}
+
+.blick {
+ background-color: red;
+}
+
+/*_________________________congratulation _____________________*/
+
+.wrapper-congratulation {
+ display: none;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: absolute;
+ z-index: 10;
+ width: 50%;
+ height: 55%;
+ background-color: rgb(128, 201, 57);
+
+ border-radius: 20px;
+ border: 10px solid #6BA532;
+ box-shadow: 0px 0px 135px 178px rgba(255, 244, 184, 0.65);
+}
+
+.wrapper-congratulation p {
+ font-size: 60px;
+ color: #AD3D3D;
+ -webkit-text-stroke: 3px #691616;
+ margin-bottom: 20px;
+}
+
+.btn-score,
+.btn-play-again-win {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 20%;
+ height: 10%;
+ background-color: #6BA532;
+ margin-top: 30px;
+ text-transform: uppercase;
+ border-radius: 10px;
+ cursor: pointer;
+}
+
+.btn-score:hover,
+.btn-play-again-win:hover {
+ box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.75);
+}
+
+.show {
+ display: flex;
+}
+
+
+
+/*______________________score____________________*/
+
+.score-columns {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ height: 90%;
+ width: 100%;
+}
+
+.score-col {
+ width: 33%;
+ font-size: 15px;
+ text-align: center;
+}
+
+.btn-play-again-score {
+ align-self: center;
+ padding: 10px 10px;
+ font-size: 20px;
+}
+
+.btn-play-again-score:active {
+ padding: 9px 9px;
+ font-size: 11px;
+}
+
+.lvl-info {
+ margin-top: 30px;
+}
+
+.lvl-info div {
+ padding-bottom: 10px;
+ font-size: 18px;
+}

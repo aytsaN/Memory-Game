@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <title>Match-match game</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+ <div class="wrapper-welcom show" id="wrapperWelcom">
+  <h1>match match game</h1>
+  <div class="content">
+   <h2 class="content-heading">Description:</h2>
+   <p class="content-text">
+    Match Match, also known as Concentration, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
+   </p>
+  </div>
+  <div class="content">
+   <h2 class="content-heading">Rules:</h2>
+   <p class="content-text">
+    The player chooses two cards and turns them face up. If they are of the same picture then the cards are remain in this position. If they are not of the same picture, they are turned face down again. The game ends when all cards are face-up.
+   </p>
+  </div>
+  <div class="btn btn-play" id="btnPlay">play game</div>
+ </div>
+ <div class="wrapper-settings" id="wrapperSetting">
+  <form action="#" class="formPlayer">
+   <h2 class="settings-heading">Enter</h2>
+   <label for="playerFirstName">
+    First Name:
+    <input type="text" id="playerFirstName" required placeholder="first Name"">
+   </label>
+   <label for="playerSecondName">
+    Second Name:
+    <input type="text" id="playerSecondName" required placeholder="second Name">
+   </label>
+   <label for="playerEmail">
+    Email:
+    <input type="email" id="playerEmail" required placeholder="email@mail.com">
+   </label>
+  </form>
+  <div class="shirts-levels">
+   <div class="shirts" id="shirts">
+    <h2 class="settings-heading">Shirt Cards</h2>
+    <img src="img/donut-shirt.jpg" alt="" width="150" class="img-shirt donut-shirt shirt-checked">
+    <img src="img/mountain-shirt.jpg" alt="" width="150" class="img-shirt mountain-shirt">
+    <img src="img/planet-shirt.jpg" alt="" width="150" class="img-shirt planet-shirt">
+   </div>
+   <div class="levels" id="difficultyLevel">
+    <h2 class="settings-heading">Game Difficulty</h2>
+    <label for="lowLevel">
+     <input name="level" type="radio" id="lowLevel" value="10" checked>Low (5 x 2)
+    </label>
+    <label for="mediumLevel">
+     <input name="level" type="radio" id="mediumLevel" value="18">Medium (6 x 3)
+    </label>
+    <label for="hightLevel">
+     <input name="level" type="radio" id="hightLevel" value="24">Hight (8 x 3)
+    </label>
+   </div>
+  </div>
+  <div class="btn btn-start" id="startGame">start</div>
+ </div>
+
+ <div class="wrapper-game " id="wrapperGame">
+  <div class="content-info">
+   <div class="timer">0 : 0</div>
+   <div class="name-cheer-up">
+   	<div class="" id="actualPlayer"></div>
+   <div>you are cool</div></div>
+   <div class="btn btn-back" id="backToSettings">back</div>
+  </div>
+  <div class="game-fild" id="gameFild"></div>
+ </div>
+
+ <div class="wrapper-congratulation" id="wrapperCongratulation">
+  <p>You're the winner!</p>
+  <div class="btn-score" id="btnScore">score</div>
+  <div class="btn-play-again-win" id="btnPlayAgainWin">play again</div>
+ </div>
+
+ <div class="wrapper-score" id="wrapperScore">
+	<div class="score-columns">
+ <div class="score-col score-low-lvl">
+  <h2>low lvl</h2>
+  <div class="lvl-info" id="low-lvl-info"></div>
+ </div>
+ <div class="score-col score-medium-lvl">
+  <h2>medium lvl</h2>
+  <div class="lvl-info" id="medium-lvl-info"></div>
+ </div>
+ <div class="score-col score-hight-lvl">
+  <h2>hight lvl</h2>
+  <div class="lvl-info" id="hight-lvl-info"></div>
+ </div>
+</div>
+ <div class="btn-play-again-score btn" id="btnPlayAgainScore">play again</div>
+</div>
+
+ <script src="js/main.js"></script>
+</body>
+
+</html>
